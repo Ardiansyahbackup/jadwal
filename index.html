@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            height: 80%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        thead {
+            background-color: aqua;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Kartu Rencana Studi</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Hari</td>
+                <td>Mata Kuliah</td>
+                <td>SKS</td>
+                <td>JAM</td>
+                <td>Ruang</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Senin</td>
+                <td>Dasar Pemrograman (Aslab)</td>
+                <td>2</td>
+                <td>10.20 - 12.00</td>
+                <td> D.2.H</td>
+            <tr>
+                <td rowspan="2">Selasa</td>
+                <td>Pendidikan Kewarganegaraan</td>
+                <td>2</td>
+                <td>08.40 - 10.20</td>
+                <td> Kulino</td>
+            </tr>
+            <tr>
+                <td>Sistem Operasi</td>
+                <td>3</td>
+                <td>12.30 - 15.00</td>
+                <td> H.4.9</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Rabu</td>
+                <td>Etika Profesi</td>
+                <td>2</td>
+                <td>07.00 - 08.40</td>
+                <td> H.4.5</td>
+            </tr>
+            <tr>
+                <td>Bahas Inggris</td>
+                <td>2</td>
+                <td>08.40 - 10.20</td>
+                <td> Kulino</td>
+            </tr>
+            <tr>
+                <td>Dasar Pemrograman(Aslab)</td>
+                <td>2</td>
+                <td>10.20 - 12.00</td>
+                <td>D.2.H</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Kamis</td>
+                <td>Kriptografi</td>
+                <td>3</td>
+                <td>07.00 - 09.30</td>
+                <td> H.4.12</td>
+            </tr>
+            <tr>
+                <td>Bahasa Indonesia</td>
+                <td>2</td>
+                <td>10.20 - 12.00</td>
+                <td>Kulino</td>
+            </tr>
+
+            <tr>
+                <td>Sistem Informasi</td>
+                <td>3</td>
+                <td>12.30 - 15.00</td>
+                <td>H.4.12</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Jum'at</td>
+                <td>Tehcnopreneurship</td>
+                <td>2</td>
+                <td>07.00 - 08.40</td>
+                <td>Kulino</td>
+            </tr>
+            <tr>
+                <td>Probabilitan dan Statistik</td>
+                <td>3</td>
+                <td>09.30 - 12.00</td>
+                <td>H.4.8</td>
+            </tr>
+            <tr>
+                <td>Pendidikan Agama Islam</td>
+                <td>2</td>
+                <td>16.20 - 18.00</td>
+                <td>Kulino</td>
+            </tr>
+
+        </tbody>
+    </table>
+</main>
+</body>
+
+</html>
