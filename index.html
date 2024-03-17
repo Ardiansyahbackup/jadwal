@@ -3,265 +3,466 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        main {
-            height: 80%;
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        thead {
-            background-color: aqua;
-        }
-
-        td {
-            font-size: 13px;
-            border: 1px solid black;
-            text-align: center;
-            padding: 8px;
-        }
-        @media screen and (max-width: 768px) {
-    table {
-        width: 100%;
-    }
-
-    thead {
-        display: none;
-    }
-
-    tbody, tr, td {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    td {
-        padding-left: 0;
-        text-align: left;
-    }
-
-    td[data-label="Hari"] {
-        border-top: 3px solid yellow;
-        border-bottom: none;
-    }
-    td[data-label="Mata Kuliah"] {
-        border-top: none;
-        border-bottom: none;
-    }
-    td[data-label="SKS"] {
-        border-top: none;
-        border-bottom: none;
-    }
-    td[data-label="JAM"] {
-        border-top: none;
-        border-bottom: none;
-    }
-    td[data-label="Ruang"] {
-        border-top: none;
-        border-bottom: 2px solid black;
-    }
-    
-
-    td[data-label]::before {
-        content: attr(data-label) ":";
-        display: flex;
-        font-weight: bold;
-        margin-right: 5px; /* Menambahkan jarak antara label dan nilai */
-    }
-
-   
-}
-
-
-
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Jadwal</title>
 </head>
 
-<body>
-    <main>
-        <h1>Jadwal Kuliah</h1>
-        <table>
-            <thead>
-                <tr>
-                    <td>Hari</td>
-                    <td>Mata Kuliah</td>
-                    <td>SKS</td>
-                    <td>JAM</td>
-                    <td>Ruang</td>
-                </tr>
-            </thead>
-            <tbody>
+<body class="bg-gray-700">
+    <div class=" min-w-screen min-h-screen flex md:justify-center md:items-center">
+        <div class=" sm:block w-1 bg-blue-300 ml-8 md:ml-0 absolute min-h-screen h-[430vh] md:h-[180vh] md:left-1/2 md:transform md:-translate-x-1/2"></div>
 
-                <tr>
-                    <td data-label="Hari" rowspan="3">Senin</td>
-                    <td data-label="Mata Kuliah">Pemrograman Berorientasi Objek(aslab)</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">07.00 - 08.40</td>
-                    <td data-label="Ruang"> D.2.A</td>
-                </tr>
-
-                <tr>
-                    
-                    <td  data-label="Mata Kuliah">Interaksi Manusia dan Komputer</td>
-                    <td data-label="SKS">3</td>
-                    <td data-label="JAM">09.30 - 12.00</td>
-                    <td data-label="Ruang"> H.4.6</td>
-                </tr>
-                <tr>
-                    <td  data-label="Mata Kuliah">Matriks dan Ruang Vektor</td>
-                    <td data-label="SKS">3</td>
-                    <td data-label="JAM">15.30 - 18.00</td>
-                    <td data-label="Ruang"> H.4.1</td>
-                </tr>
-            </div>
-
-
-                <tr>
-                    <td data-label="Hari" rowspan="4">Selasa</td>
-                    <td  data-label="Mata Kuliah">MAGANG UDI</td>
-                    <td data-label="SKS"></td>
-                    <td data-label="JAM">08.00 - 16.00</td>
-                    <td data-label="Ruang">Gedung J</td>
-
-                </tr>
-                <tr>
-                    <td  data-label="Mata Kuliah">Pemrograman Berorientasi Objek(aslab)</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">07.00 - 08.40</td>
-                    <td data-label="Ruang"> D.2.K</td>
-                </tr>
-                <tr>
-                    <td  data-label="Mata Kuliah">Machine Learning</td>
-                    <td data-label="SKS">3</td>
-                    <td data-label="JAM">09.30 - 12.00</td>
-                    <td data-label="Ruang">H.7.1</td>
-                </tr>
-                <tr>
-                    <td  data-label="Mata Kuliah">Otomata dan Teori Bahasa</td>
-                    <td data-label="SKS">3</td>
-                    <td data-label="JAM">12.30 - 15.00</td>
-                    <td data-label="Ruang"> H.4.8</td>
-                </tr>
-            </div>
-
-                <tr>
-                    <td data-label="Hari" rowspan="5">Rabu</td>
-                    <td  data-label="Mata Kuliah">Pemrograman Berorientasi Objek(aslab)</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">07.00 - 08.40</td>
-                    <td data-label="Ruang"> D.2.K</td>
-                </tr>
-                <tr>
-                    <td data-label="Mata Kuliah">Pemrograman Berorientasi Objek</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">08.40 - 10.20</td>
-                    <td data-label="Ruang">D.2.K</td>
-                </tr>
-
-                <tr>
-                    <td data-label="Mata Kuliah">Literasi Informasi</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">10.20 - 12.00</td>
-                    <td data-label="Ruang">Kulino</td>
-                </tr>
-                <tr>
-                    <td data-label="Mata Kuliah">Algoritma Dan Struktur Data(aslab)</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">12.30 - 14.10</td>
-                    <td data-label="Ruang">D.3.N</td>
-                </tr>
-
-                <tr>
-                    <td data-label="Mata Kuliah">Sistem Basis Data</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">14.10 - 15.50</td>
-                    <td data-label="Ruang"> D.3.N</td>
-                </tr>
-            </div>
-            <tr>
-                    <td data-label="Hari" rowspan="6">Kamis</td>
-                    <td data-label="Mata Kuliah">MAGANG UDI</td>
-                    <td data-label="SKS"></td>
-                    <td data-label="JAM">08.00 - 16.00</td>
-                    <td data-label="Ruang">Gedung J</td>
-
-                </tr>
-                <tr>
-                    <td data-label="Mata Kuliah">Sistem Basis Data(aslab)</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">07.00 - 08.40</td>
-                    <td data-label="Ruang"> D.3.N</td>
-                </tr>
-                <tr>
-                    <td data-label="Mata Kuliah">Pemrograman Berorientasi Objek(aslab)</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">08.40 - 10.20</td>
-                    <td data-label="Ruang"> D.2.K</td>
-                </tr>
-                <tr>
-                    <td data-label="Mata Kuliah">Algoritma Dan Struktur Data(aslab)</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">10.20 - 12.00</td>
-                    <td data-label="Ruang">D.3.N</td>
-                </tr>
-                <tr>
-                    <td data-label="Mata Kuliah">Pemrograman Berorientasi Objek</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">12.30 - 14.10</td>
-                    <td data-label="Ruang"> H.4.10</td>
-                </tr>
-                <tr>
-                    <td data-label="Mata Kuliah">Pemrograman Berorientasi Objek(aslab)</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">18.30 - 20.10</td>
-                    <td data-label="Ruang"> D.3.N</td>
-                </tr>
+        <div class="grid gap-y-5 py-5 px-8 md:px-32 w-full grid-cols-1 md:grid-cols-1 md:justify-center md:items-center ">
+            <div class="flex w-full md:justify-start items-center">
+                <div class="rounded-full  bg-gray-300 border-white border-3 p-1 md:w-16 md:h-16 md:absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                    Senin
                 </div>
-
-                <tr>
-                    <td data-label="Hari" rowspan="3">Jum'at</td>
-                    <td data-label="Mata Kuliah">Pemrograman Berorientasi Objek(aslab)</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">07.00 - 08.40</td>
-                    <td data-label="Ruang"> D.2.K</td>
-                </tr>
-
-                <tr>
-                    <td data-label="Mata Kuliah">Jaringan Komputer</td>
-                    <td data-label="SKS">3</td>
-                    <td data-label="JAM">09.30 - 12.00</td>
-                    <td data-label="Ruang">H.4.7</td>
-                </tr>
-                <tr>
-                    <td data-label="Mata Kuliah">Pemrograman Berorientasi Objek(aslab)</td>
-                    <td data-label="SKS">2</td>
-                    <td data-label="JAM">14.10 - 15.50</td>
-                    <td data-label="Ruang"> D.2.A</td>
-                </tr>
+                <div class="bg-white py-4 overflow-x-auto md:p-6 rounded-lg shadow-lg relative">
+                    <div class="overflow-x-auto">
+                        <table class="text-sm rtl:text-right text-black">
+                            <thead class="text-xs text-center text-black uppercase ">
+                                <tr>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        Mata Kuliah
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        SKS
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        JAM
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        Ruang
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr class="bg-white border-b">
+                                    <td class="py-4 px-5 md:py-3 md:px-2  font-medium text-black whitespace-nowrap ">
+                                        Pemrograman Berorientasi Objek
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                        07.00-08.40
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                        D.2.A
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                                        Interaksi Manusia dan Komputer
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                        3
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                        09.30 - 12.00
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                        H.4.6
+                                    </td>
+                                </tr>
+                                <tr class="bg-white ">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                                        Matriks dan Ruang Vektor
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                        3
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                        15.30 - 18.00
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                        H.4.1
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        
             </div>
-        </tbody>
-        </table>
-    </main>
+
+            <div class="flex w-full md:justify-end items-center">
+                <div class="rounded-full  bg-gray-300 border-white border-3 p-1 md:w-16 md:h-16 md:absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                    Selasa
+                </div>
+                <div class="bg-white py-4 overflow-x-auto md:p-6 rounded-lg shadow-lg relative">
+                    <div class="overflow-x-auto">
+                        <table class="text-sm rtl:text-right text-black">
+                            <thead class="text-xs text-center text-black uppercase ">
+                                <tr>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        Mata Kuliah
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        SKS
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        JAM
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        Ruang
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr class="bg-white border-b">
+                                    <td class="py-4 px-5 md:py-3 md:px-2  font-medium text-black whitespace-nowrap ">
+                        MAGANG UDI
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        08.00 - 16.00
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        Gedung J
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                        Pemrograman Berorientasi Objek
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        07.00 - 08.40
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                         D.2.K
+                                    </td>
+                                </tr>
+                                <tr class="bg-white ">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                        Machine Learning
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                        3
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        09.30 - 12.00
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        H.7.1
+                                    </td>
+                                </tr>
+                                <tr class="bg-white ">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                        Otomata dan Teori Bahasa
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                                        3
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        12.30 - 15.00
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                         H.4.8
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        
+            </div>
+
+            <div class="flex w-full md:justify-start items-center">
+                <div class="rounded-full  bg-gray-300 border-white border-3 p-1 md:w-16 md:h-16 md:absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                    Rabu
+                </div>
+                <div class="bg-white py-4 overflow-x-auto md:p-6 rounded-lg shadow-lg relative">
+                    <div class="overflow-x-auto">
+                        <table class="text-sm rtl:text-right text-black">
+                            <thead class="text-xs text-center text-black uppercase ">
+                                <tr>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        Mata Kuliah
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        SKS
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        JAM
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        Ruang
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr class="bg-white border-b">
+                                    <td class="py-4 px-5 md:py-3 md:px-2  font-medium text-black whitespace-nowrap ">
+                        Pemrograman Berorientasi Objek
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        07.00 - 08.40
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                         D.2.K
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                        Pemrograman Berorientasi Objek
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        08.40 - 10.20
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                         D.2.K
+                                    </td>
+                                </tr>
+                                <tr class="bg-white ">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                    Literasi Informasi
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        10.20 - 12.00
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        Kulino
+                                    </td>
+                                </tr>
+                                <tr class="bg-white ">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                    Algoritma Dan Struktur Data
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        12.30 - 14.10
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        D.3.N
+                                    </td>
+                                </tr>
+                                <tr class="bg-white ">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                    Sistem Basis Data
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        14.10 - 15.50
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        D.3.N
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        
+            </div>
+
+            <div class="flex w-full md:justify-end items-center">
+                <div class="rounded-full  bg-gray-300 border-white border-3 p-1 md:w-16 md:h-16 md:absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                    Kamis
+                </div>
+                <div class="bg-white py-4 overflow-x-auto md:p-6 rounded-lg shadow-lg relative">
+                    <div class="overflow-x-auto">
+                        <table class="text-sm rtl:text-right text-black">
+                            <thead class="text-xs text-center text-black uppercase ">
+                                <tr>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        Mata Kuliah
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        SKS
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        JAM
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        Ruang
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr class="bg-white border-b">
+                                    <td class="py-4 px-5 md:py-3 md:px-2  font-medium text-black whitespace-nowrap ">
+                    MAGANG UDI
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        08.00 - 16.00
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        Gedung J
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                    Sistem Basis Data
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        07.00 - 08.40
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                         D.3.N
+                                    </td>
+                                </tr>
+                                <tr class="bg-white ">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                    Pemrograman Berorientasi Objek
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        08.40 - 10.20
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                         D.2.K
+                                    </td>
+                                </tr>
+                                <tr class="bg-white ">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                    Algoritma Dan Struktur Data
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        10.20 - 12.00
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        D.3.N
+                                    </td>
+                                </tr>
+                                <tr class="bg-white ">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                    Pemrograman Berorientasi Objek
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        12.30 - 14.10
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                         H.4.10
+                                    </td>
+                                </tr>
+                                <tr class="bg-white ">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                    Pemrograman Berorientasi Objek
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        18.30 - 20.10
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                         D.3.N
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        
+            </div>
+
+            <div class="flex w-full md:justify-start items-center">
+                <div class="rounded-full  bg-gray-300 border-white border-3 p-1 md:w-16 md:h-16 md:absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+                    Jum'at
+                </div>
+                <div class="bg-white py-4 overflow-x-auto md:p-6 rounded-lg shadow-lg relative">
+                    <div class="overflow-x-auto">
+                        <table class="text-sm rtl:text-right text-black">
+                            <thead class="text-xs text-center text-black uppercase ">
+                                <tr>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        Mata Kuliah
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        SKS
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        JAM
+                                    </th>
+                                    <th scope="col" class="py-4 px-5 md:py-3 md:px-2">
+                                        Ruang
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr class="bg-white border-b">
+                                    <td class="py-4 px-5 md:py-3 md:px-2  font-medium text-black whitespace-nowrap ">
+                        Pemrograman Berorientasi Objek
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        07.00 - 08.40
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                         D.2.K
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                    Jaringan Komputer
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        3
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        09.30 - 12.00
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        H.4.7
+                                    </td>
+                                </tr>
+                                <tr class="bg-white ">
+                                    <td class=" font-medium text-black whitespace-nowrap ">
+                        Pemrograman Berorientasi Objek
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        2
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                        14.10 - 15.50
+                                    </td>
+                                    <td class="py-4 px-5 md:py-3 md:px-2">
+                         D.2.A
+                                    </td>
+                                </tr>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
